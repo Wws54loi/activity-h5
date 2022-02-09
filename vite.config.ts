@@ -4,7 +4,6 @@ import path from "path";
 import { createVitePlugins } from './config/vite/plugins'
 import proxy from './config/vite/proxy';
 import { VITE_DROP_CONSOLE, VITE_PORT } from './config/constant';
-import { generateModifyVars } from './config/themeConfig'
 
 function resovePath(paths: string) {
   // 如何 __dirname 找不到 需要 yarn add @types/node --save-dev
@@ -32,7 +31,6 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     css: {
       preprocessorOptions: {
         less: {
-          modifyVars: generateModifyVars(),
           javascriptEnabled: true,
           // 这样就能全局使用 src/assets/styles/base.less 定义的 变量
           additionalData: `@import "${resovePath('src/assets/styles/base.less')}";`

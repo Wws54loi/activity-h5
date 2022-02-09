@@ -37,15 +37,6 @@ export const framework = [
   },
   {
     content:
-      'Tailwind CSS是一个功能类优先的CSS框架，它集成了原子式的css类名，它们能直接在脚本标记语言中组合起来，构建出任何设计。😛',
-    avatar: 'https://pbs.twimg.com/profile_images/1468993891584073729/a_op8KnL_200x200.jpg',
-    title: 'Tailwind',
-    github: 'https://github.com/tailwindlabs/tailwindcss',
-    color: ' from-teal-400 to-cyan-300',
-    author: '原子式CSS',
-  },
-  {
-    content:
       '字节跳动出品的企业级设计系统,主要服务于字节跳动旗下中后台产品的体验设计和技术实现，主要由UED设计和开发同学共同构建及维护',
     avatar: 'https://avatars.githubusercontent.com/u/64576149?s=200&v=4',
     title: 'Arco Design',

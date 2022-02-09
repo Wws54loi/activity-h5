@@ -5,7 +5,6 @@
             
             <!-- <div class="logo-text">Arco Design Pro</div> -->
         </div>
-        <LoginBanner />
         <div class="content">
             <div class="content-inner">
                 <LoginForm />
@@ -19,7 +18,6 @@
 
 <script setup lang="ts">
 import Footer from '@components/footer/index.vue';
-import LoginBanner from './components/banner.vue';
 import LoginForm from './components/login-form.vue';
 import logo from '@/assets/icons/svg/logo.svg'
 
@@ -29,12 +27,6 @@ import logo from '@/assets/icons/svg/logo.svg'
 .container {
     display: flex;
     height: 100vh;
-
-    .banner {
-        width: 550px;
-        background: linear-gradient(163.85deg, #1d2129 0%, #00308f 100%);
-    }
-
     .content {
         position: relative;
         display: flex;

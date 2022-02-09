@@ -3,7 +3,6 @@ import SvgIcon from './SvgIcon/index.vue'
 import { ref } from 'vue'
 import { useDark, useToggle } from '@vueuse/core';
 import { useAppStore, useUserStore } from '@/store';
-import { IconMoonFill, IconSunFill } from '@arco-design/web-vue/es/icon';
 const title = ref('I want to study typescript')
 // 检测浏览器系统主题
 const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)')
@@ -56,12 +55,6 @@ const ThemeChange = (val: string | number | boolean) => {
                 <ul class="flex space-x-8">
                   <li>
                     <router-link
-                      to="/markdown"
-                      class="hover:text-sky-500 dark:hover:text-sky-400"
-                    >markdown</router-link>
-                  </li>
-                  <li>
-                    <router-link
                       to="/demo"
                       class="hover:text-sky-500 dark:hover:text-sky-400"
                     >GithubDemo</router-link>
@@ -77,26 +70,6 @@ const ThemeChange = (val: string | number | boolean) => {
               <div
                 class="flex items-center pl-6 ml-6 border-l border-slate-200 dark:border-slate-800"
               >
-                <a-tooltip
-                  :content="
-                    theme === 'light'
-                      ? '设置暗黑主题'
-                      : '设置明亮主题'
-                  "
-                >
-                  <a-button
-                    size="mini"
-                    class="nav-btn"
-                    type="outline"
-                    :shape="'circle'"
-                    @click="toggleTheme"
-                  >
-                    <template #icon>
-                      <icon-moon-fill v-if="theme === 'dark'" />
-                      <icon-sun-fill v-else />
-                    </template>
-                  </a-button>
-                </a-tooltip>
                 <a
                   href="https://github.com/MaleWeb/fast-vue3"
                   target="_bank"

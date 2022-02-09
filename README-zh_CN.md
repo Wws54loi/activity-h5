@@ -13,7 +13,6 @@
     <img src="https://img.shields.io/badge/-Axios-008fc7?logo=axios.js&logoColor=white" />
     <img src="https://img.shields.io/badge/-Prettier-ef9421?logo=Prettier&logoColor=white" alt="Prettier">
     <img src="https://img.shields.io/badge/-Less-1D365D?logo=less&logoColor=white" alt="Less">
-    <img src="https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?logo=Tailwind%20CSS&logoColor=white" alt="Taiwind">
     <img src="" alt="">
 <p>    
 
@@ -58,20 +57,13 @@
 │    ├── App.vue         // vue模板入口   
 │    ├── main.ts         // vue模板js
 ├── .d.ts                // 类型定义   
-├── tailwind.config.js   // tailwind全局配置   
 ├── tsconfig.json        // ts配置
 └── vite.config.ts       // vite全局配置  
 ```
 
-## 💕支持JSX语法
 
-```json
-{
-    ...
-    "@vitejs/plugin-vue-jsx": "^1.3.3"
-    ...
-}
-```
+
+
 ## 🎸UI组件按需加载，自动导入
 ```typescript
 //模块化写法
@@ -108,7 +100,6 @@ export const AutoRegistryComponents = () => {
  */
 import type { Plugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
 import { ConfigSvgIconsPlugin } from './svgIcons';
 import { AutoRegistryComponents } from './component';
 import { AutoImportDeps } from './autoImport';
@@ -441,11 +432,8 @@ git clone -b template https://github.com/MaleWeb/fast-vue3.git
 - [Hammer](http://hammerjs.github.io/)，可以识别由触摸、鼠标和指针事件做出的手势,只有 7.34kb
 - [outils](https://github.com/proYang/outils)，开发中常用的函数集，也可以使用`lodash`
 
-- [tailwindcss](https://tailwindcss.com/)，艾玛香的一塌糊涂，一行css不写，3分钟出一个页面。不适合初中级前端，建议还是先踏实学基础再用框架。
 
-  ![tailwindcss-1](https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/tailwindcss-1.gif)
 
-  ![tailwindcss-2](https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/tailwindcss-2.gif)
 
 - [Vue I18n](https://vue-i18n.intlify.dev/)  是 Vue.js 的国际化插件，如果你想做开源框架，国际化首选插件。
 

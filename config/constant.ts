@@ -27,7 +27,7 @@ export const ICONFONTURL = '//at.alicdn.com/t/font_3004192_9jmc1z9neiw.js'; // �
 export const ANALYSIS = true;
 
 // 是否支持Md渲染
-export const MARKDOWN = true;
+// export const MARKDOWN = true;
 
 // 代码压缩
 export const COMPRESSION = true;

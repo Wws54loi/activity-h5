@@ -1,3 +1,7 @@
+/**
+ * @name visualizer
+ * @description npm run build 自动打开
+ */
 import visualizer from 'rollup-plugin-visualizer';
 import { ANALYSIS } from '../../constant';
 
