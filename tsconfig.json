@@ -30,7 +30,6 @@
     "plop-tpls/component/prompt.js",
     "plopfile.js",
     "postcss.config.js",
-    "config/vite/plugins/DSBridge.js"
   ],
   "exclude": ["node_modules", "dist"]
 }
