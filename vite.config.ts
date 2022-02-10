@@ -1,28 +1,27 @@
-
 import { UserConfig, ConfigEnv } from 'vite'
-import path from "path";
+import path from 'path'
 import { createVitePlugins } from './config/vite/plugins'
-import proxy from './config/vite/proxy';
-import { VITE_DROP_CONSOLE, VITE_PORT } from './config/constant';
+import proxy from './config/vite/proxy'
+import { VITE_DROP_CONSOLE, VITE_PORT } from './config/constant'
 
 function resovePath(paths: string) {
   // 如何 __dirname 找不到 需要 yarn add @types/node --save-dev
-  return path.resolve(__dirname, paths);
+  return path.resolve(__dirname, paths)
 }
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfig => {
-  const isBuild = command === 'build';
-  console.log(command, mode);
+  const isBuild = command === 'build'
+  console.log(command, mode)
   return {
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, './src'),
+        '@': path.resolve(__dirname, './src'),
         '@config': resovePath('./config'),
-        "@components": resovePath('./src/components'),
+        '@components': resovePath('./src/components'),
         '@utils': resovePath('./src/utils'),
         '@api': resovePath('./src/api'),
-      }
+      },
     },
     // plugins
     plugins: createVitePlugins(isBuild),
@@ -33,7 +32,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         less: {
           javascriptEnabled: true,
           // 这样就能全局使用 src/assets/styles/base.less 定义的 变量
-          additionalData: `@import "${resovePath('src/assets/styles/base.less')}";`
+          additionalData: `@import "${resovePath('src/assets/styles/base.less')}";`,
         },
       },
     },
@@ -71,4 +70,4 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       chunkSizeWarningLimit: 2000,
     },
   }
-};
+}

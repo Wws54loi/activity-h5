@@ -1,6 +1,6 @@
 /* ./src/index.css */
 
 @font-face {
-    font-family: 'Blimone';
-    src        : local('Blimone'), url(../src/assets/fonts/Blimone-Light.woff);
+  font-family: 'Blimone';
+  src: local('Blimone'), url(../src/assets/fonts/Blimone-Light.woff);
 }

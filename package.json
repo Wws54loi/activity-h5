@@ -28,6 +28,7 @@
     "postcss-px-to-viewport": "^1.1.1",
     "qs": "^6.10.3",
     "rollup-plugin-visualizer": "^5.5.4",
+    "vant": "^3.4.4",
     "vconsole": "^3.11.2",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-vconsole": "^1.1.1",

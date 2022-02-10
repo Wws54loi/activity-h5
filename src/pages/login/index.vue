@@ -1,50 +1,49 @@
 <template>
-    <div class="container">
-        <div class="logo">
-            <img :src="logo" width="240" />
-            
-            <!-- <div class="logo-text">Arco Design Pro</div> -->
-        </div>
-        <div class="content">
-            <div class="content-inner">
-                <LoginForm />
-            </div>
-            <div class="footer">
-                <Footer />
-            </div>
-        </div>
+  <div class="container">
+    <div class="logo">
+      <img :src="logo" width="240" />
+
+      <!-- <div class="logo-text">Arco Design Pro</div> -->
     </div>
+    <div class="content">
+      <div class="content-inner">
+        <LoginForm />
+      </div>
+      <div class="footer">
+        <Footer />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import Footer from '@components/footer/index.vue';
-import LoginForm from './components/login-form.vue';
-import logo from '@/assets/icons/svg/logo.svg'
-
+  import Footer from '@components/footer/index.vue'
+  import LoginForm from './components/login-form.vue'
+  import logo from '@/assets/icons/svg/logo.svg'
 </script>
 
 <style lang="less" scoped>
-.container {
+  .container {
     display: flex;
     height: 100vh;
     .content {
-        position: relative;
-        display: flex;
-        flex: 1;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 40px;
+      position: relative;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 40px;
     }
 
     .footer {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
     }
-}
+  }
 
-.logo {
+  .logo {
     position: fixed;
     top: 24px;
     left: 22px;
@@ -53,10 +52,10 @@ import logo from '@/assets/icons/svg/logo.svg'
     align-items: center;
 
     &-text {
-        margin-right: 4px;
-        margin-left: 4px;
-        color: var(--color-fill-1);
-        font-size: 20px;
+      margin-right: 4px;
+      margin-left: 4px;
+      color: var(--color-fill-1);
+      font-size: 20px;
     }
-}
+  }
 </style>

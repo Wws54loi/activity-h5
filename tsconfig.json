@@ -10,29 +10,14 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "baseUrl": ".",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "node"
-    ],
+    "lib": ["esnext", "dom"],
+    "types": ["node"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@config/*": [
-        "config/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@api/*": [
-        "src/api/*"
-      ]
+      "@/*": ["src/*"],
+      "@config/*": ["config/*"],
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@api/*": ["src/api/*"]
     }
   },
   "include": [
@@ -44,10 +29,8 @@
     "**/*.md",
     "plop-tpls/component/prompt.js",
     "plopfile.js",
-    "postcss.config.js"
-, "config/vite/plugins/DSBridge.js"  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+    "postcss.config.js",
+    "config/vite/plugins/DSBridge.js"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

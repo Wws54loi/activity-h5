@@ -48,7 +48,7 @@ axiosInstance.interceptors.response.use(
       return Promise.reject(response.data)
     }
     showMessage('网络连接异常,请稍后再试!')
-  }
+  },
 )
 
 // axios实例拦截请求
@@ -62,7 +62,7 @@ axiosInstance.interceptors.request.use(
   },
   (error: any) => {
     return Promise.reject(error)
-  }
+  },
 )
 
 const request = <T = any>(config: AxiosRequestConfig, options?: AxiosRequestConfig): Promise<T> => {
@@ -70,30 +70,30 @@ const request = <T = any>(config: AxiosRequestConfig, options?: AxiosRequestConf
     if (!options) {
       return axiosInstance.request<T, T>({
         url: config,
-      });
+      })
       // throw new Error('请配置正确的请求参数');
     } else {
       return axiosInstance.request<T, T>({
         url: config,
         ...options,
-      });
+      })
     }
   } else {
-    return axiosInstance.request<T, T>(config);
+    return axiosInstance.request<T, T>(config)
   }
-};
+}
 export function get<T = any>(config: AxiosRequestConfig, options?: AxiosRequestConfig): Promise<T> {
-  return request({ ...config, method: 'GET' }, options);
+  return request({ ...config, method: 'GET' }, options)
 }
 
 export function post<T = any>(
   config: AxiosRequestConfig,
   options?: AxiosRequestConfig,
 ): Promise<T> {
-  return request({ ...config, method: 'POST' }, options);
+  return request({ ...config, method: 'POST' }, options)
 }
-export default request;
-export type { AxiosInstance, AxiosResponse };
+export default request
+export type { AxiosInstance, AxiosResponse }
 /**
  * @description: 用户登录案例
  * @params {ILogin} params
