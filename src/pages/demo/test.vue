@@ -12,13 +12,27 @@
   import { Button as VantButton } from 'vant'
   import dsbridge from 'dsbridge'
   import { getUserInfo } from '@/common/hybridUtils'
+  import { getResponse } from '@/utils/http'
+  import { useUserStore } from '@/store'
+
+  const userStore = useUserStore()
   dsbridge.hasNativeMethod('getNameSpace')
-   const wx = window.wx
-  const getUser = () => {
-    getUserInfo()
+  const wx = window.wx
+  const getUser = async () => {
+    // getUserInfo()
+    const res = await getResponse(
+      '/lazyUsers/invitationAwardInfos',
+      {
+        uid: userStore.uid,
+      },
+      {
+        showLoading: false,
+        version: 3,
+      },
+    )
   }
-  const toOtherPage = ()=>{
-    wx.miniProgram.navigateTo({ url:'/v3/pages/guide/assistant/index'})
+  const toOtherPage = () => {
+    wx.miniProgram.navigateTo({ url: '/v3/pages/guide/assistant/index' })
   }
 </script>
 

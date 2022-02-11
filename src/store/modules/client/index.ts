@@ -8,13 +8,16 @@ export const useClientStore = defineStore(
   {
     state: (): ClientState => ({
       ismini: true,
+      isNgw:true,
     }),
     getters: {},
     actions: {
       // Update app settings
-      setIsmini(ismini: Boolean) {
-        // @ts-ignore-next-line
-        this.$ismini = ismini
+      setIsmini(ismini: boolean) {
+        this.ismini = ismini
+      },
+      setIsNgw(isNgw: boolean) {
+        this.isNgw = isNgw
       },
     },
   },

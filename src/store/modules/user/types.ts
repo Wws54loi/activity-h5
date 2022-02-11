@@ -1,21 +1,10 @@
-export type RoleType = '' | '*' | 'admin' | 'user'
+
+export interface Local {
+  cityId: string
+  lng: string
+  lat: string
+}
 export interface UserState {
-  user_id?: string
-  user_name?: string
-  real_name?: string
-  avatar?: string
-  desc?: string
-  password?: string
-  token?: string
-  organization?: string
-  location?: string
-  email?: string
-  auths?: string[]
-  is_admin?: number
-  blogJuejin?: string
-  blogZhihu?: string
-  blogGithub?: string
-  profileBio?: string
-  devLanguages?: string
-  role?: RoleType
+  uid: number
+  location: Local
 }

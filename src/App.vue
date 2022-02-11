@@ -2,6 +2,9 @@
   <router-view></router-view>
 </template>
 <script setup lang="ts">
+console.log(import.meta.env.VITE_APP_API_BASEURL,'喵');
+
+
   // import { useAppStore } from './store/modules/app'
   // const appStore = useAppStore()
 

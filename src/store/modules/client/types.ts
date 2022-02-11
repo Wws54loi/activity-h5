@@ -1,3 +1,4 @@
 export interface ClientState {
-  ismini: boolean
+  ismini: boolean,
+  isNgw:boolean
 }

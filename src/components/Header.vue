@@ -3,7 +3,7 @@
   import { ref } from 'vue'
   import { useDark, useToggle } from '@vueuse/core'
   import { useAppStore, useUserStore } from '@/store'
-  const title = ref('I want to study typescript')
+  const title = ref('I want to study typescript') 
   // 检测浏览器系统主题
   const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)')
   const appStore = useAppStore()
