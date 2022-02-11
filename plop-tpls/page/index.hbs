@@ -4,9 +4,27 @@
   </div>
 </template>
 
-<script setup name='{{properCase "/" componentName}}'>
-  // const { proxy } = getCurrentInstance() // const router = useRouter() // const route =
-  useRoute()
+<script setup name="{{ componentName }}">
+  //APP能力
+  //import dsbridge from 'dsbridge'
+  //dsbridge.hasNativeMethod('getNameSpace')
+  //import { getUserInfo } from '@/common/hybridUtils'
+  //getUserInfo()
+  
+  //通信能力
+  //import { useUserStore } from '@/store'
+  //const userStore = useUserStore()
+
+  //微信能力
+  // const wx = window.wx
+  //const demo = () => {
+  //  wx.miniProgram.navigateTo({ url: '/v3/pages/xxxx' })
+  //}
+
+  //埋点能力
+  //import { inject } from 'vue'
+  //const $point: any = inject('$point')
+  //$point.report('** something ** ')
 </script>
 
 <style lang='less' scoped>

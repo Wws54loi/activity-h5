@@ -41,10 +41,10 @@ module.exports = {
     const actions = [
       {
         type: 'add',
-        path: `${data.path}/{{dotCase name}}.vue`,
+        path: `${data.path}/{{name}}.vue`,
         templateFile: 'plop-tpls/page/index.hbs',
         data: {
-          componentName: `${relativePath} ${data.name}`,
+          componentName: `${data.name}`,
         },
       },
     ]

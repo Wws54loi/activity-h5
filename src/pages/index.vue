@@ -9,9 +9,11 @@
   // const user = await userApi.getUserProfile()
   // console.log(user, '获取用户信息')
 </script>
-<template></template>
+<template>
+  <h1>哈哈哈哈哈</h1>
+</template>
 
-<style lang="less" scoped> 
+<style lang="less" scoped>
   .version {
     display: inline-block;
     padding: 6px;
