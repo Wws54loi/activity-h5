@@ -8,10 +8,10 @@ export const getNameSpace = () => {
     nameSpace = dsBridge.call('getNameSpace')
     if (nameSpace) {
       nameSpace = nameSpace + '.'
-      console.log(`getNameSpace获取到的nameSpace========>${nameSpace}`)
+      // console.log(`getNameSpace获取到的nameSpace========>${nameSpace}`)
     } else {
       nameSpace = nameSpace + ''
-      console.log(`getNameSpace获取到的nameSpace========>${nameSpace}`)
+      // console.log(`getNameSpace获取到的nameSpace========>${nameSpace}`)
     }
   } else {
     console.error(`getNameSpace调用异常========>未在原生端调用或原生未注册该方法`)
@@ -60,14 +60,14 @@ export const getUid = function (isObj = false) {
   let token, uid
   if (dsBridge.hasNativeMethod(`${nameSpace}getToken`)) {
     token = dsBridge.call(`${nameSpace}getToken`)
-    console.log(`${nameSpace}getToken获取到的uid========>${token}`)
+    // console.log(`${nameSpace}getToken获取到的uid========>${token}`)
   } else {
     token = null
     console.error(`${nameSpace}getToken调用异常========>未在原生端调用或原生未注册该方法`)
   }
   if (dsBridge.hasNativeMethod(`${nameSpace}getUid`)) {
     uid = dsBridge.call(`${nameSpace}getUid`)
-    console.log(`${nameSpace}getUid获取到的uid========>${uid}`)
+    // console.log(`${nameSpace}getUid获取到的uid========>${uid}`)
   } else {
     uid = null
     console.error(`${nameSpace}.getUid调用异常========>未在原生端调用或原生未注册该方法`)
@@ -119,7 +119,7 @@ export function getIsNgw() {
   let isNgw
   if (dsBridge.hasNativeMethod(`${nameSpace}isNgw`)) {
     isNgw = dsBridge.call(`${nameSpace}isNgw`)
-    console.log(`${nameSpace}isNgw========>${isNgw}`)
+    // console.log(`${nameSpace}isNgw========>${isNgw}`)
   } else {
     isNgw = null
     console.error(`${nameSpace}isNgw========>未在原生端调用或原生未注册该方法`)
@@ -335,7 +335,7 @@ export const goHome = function () {
  * 去订单列表
  * * refresh 是否刷新 Boolean(非必传)
  */
-export const goOrderList = function (params: any) {
+export const goOrderList = function (params?: any) {
   let callResult = true
   const nameSpace = getNameSpace()
   if (dsBridge.hasNativeMethod(`${nameSpace}goOrderList`)) {
@@ -597,7 +597,7 @@ export function getLocation() {
   let location
   if (dsBridge.hasNativeMethod(`${nameSpace}getLocation`)) {
     location = dsBridge.call(`${nameSpace}getLocation`)
-    console.log(`${nameSpace}getLocation获取到的location========>${location}`)
+    // console.log(`${nameSpace}getLocation获取到的location========>${location}`)
   } else {
     location = null
     console.error(`${nameSpace}getLocation调用异常========>未在原生端调用或原生未注册该方法`)
@@ -685,7 +685,7 @@ export function toTutorialListParams(params: any) {
 }
 
 /** 跳转优惠券列表 */
-export function onGetCouponListClick(params: any) {
+export function onGetCouponListClick(params?: any) {
   let callResult = true
   const nameSpace = getNameSpace()
   if (dsBridge.hasNativeMethod(`${nameSpace}onGetCouponListClick`)) {

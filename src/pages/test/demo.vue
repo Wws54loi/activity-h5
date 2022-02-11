@@ -6,13 +6,14 @@
   </div>
 </template>
 
-<script setup lang="ts" name="{{ componentName }}">
-  import {ref} from 'vue'
+<script setup lang="ts" name="demo">
+  import { ref } from 'vue'
   import AtvLoading from '@components/AtvLoading.vue'
-    import { __setTitle } from '@/common/nativeMixin'
+  import { __setTitle } from '@/common/nativeMixin'
   let loading = ref(true)
-    // 设置标题 小程序开发者工具无效 实机有效
-  __setTitle()
+  // document.title = 'baba'
+  // 设置标题 小程序开发者工具无效 实机有效
+  __setTitle('ABA')
   //APP能力
   //import dsbridge from 'dsbridge'
   //dsbridge.hasNativeMethod('getNameSpace')
@@ -35,6 +36,4 @@
   //$point.report('** something ** ')
 </script>
 
-<style lang='less' scoped>
-
-</style>
+<style lang="less" scoped></style>
