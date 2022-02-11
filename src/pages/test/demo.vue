@@ -7,8 +7,6 @@
 </template>
 
 <script setup lang="ts" name="demo">
-  import { ref } from 'vue'
-  import AtvLoading from '@components/AtvLoading.vue'
   import { __setTitle } from '@/common/nativeMixin'
   let loading = ref(true)
   // document.title = 'baba'
