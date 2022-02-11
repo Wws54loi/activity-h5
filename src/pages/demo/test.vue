@@ -14,7 +14,9 @@
   import { getUserInfo } from '@/common/hybridUtils'
   import { getResponse } from '@/utils/http'
   import { useUserStore } from '@/store'
-
+  import { inject } from 'vue'
+  const $point: any = inject('$point')
+  $point.report('pet_mtl_heart_init_help')
   const userStore = useUserStore()
   dsbridge.hasNativeMethod('getNameSpace')
   const wx = window.wx
