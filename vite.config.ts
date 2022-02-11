@@ -2,7 +2,7 @@ import { UserConfig, ConfigEnv } from 'vite'
 import path from 'path'
 import { createVitePlugins } from './config/vite/plugins'
 import proxy from './config/vite/proxy'
-import { VITE_DROP_CONSOLE, VITE_PORT } from './config/constant'
+import { VITE_DROP_CONSOLE } from './config/constant'
 
 function resovePath(paths: string) {
   // 如何 __dirname 找不到 需要 yarn add @types/node --save-dev
